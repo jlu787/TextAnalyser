@@ -12,19 +12,25 @@
         <Label Text="Please enter text to be analysed." 
     HorizontalOptions="Center" />
 
-   <Editor HeightRequest = "250" 
+   <Editor x:Name = "textToBeAnalysed" HeightRequest = "250" 
         Keyboard="Default" />
 
-        <Button Text="Analyse" VerticalOptions="Start"/>
+        <Button Text="Analyse" VerticalOptions="Start"
+        Clicked="clickAnalyseAsync"/>
 
-        <Label HorizontalOptions="FillAndExpand">
+        <Label HorizontalOptions="FillAndExpand" HeightRequest = "250">
             Key Words and Rating Output
         </Label>
         
         <StackLayout Orientation="Horizontal" VerticalOptions="End">
             
-            <Button Text="Reset" VerticalOptions="Start" HorizontalOptions="FillAndExpand"/>
-            <Button Text="History" VerticalOptions="Start" HorizontalOptions="FillAndExpand"/>
+            <Button Text="Reset" VerticalOptions="Start" 
+            HorizontalOptions="FillAndExpand"
+            Clicked="clickReset"/>
+            <Button Text="History" VerticalOptions="Start" 
+            HorizontalOptions="FillAndExpand"
+            Clicked="clickHistory"/>
+            
         </StackLayout>
         
     </StackLayout>
