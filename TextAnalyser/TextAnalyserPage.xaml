@@ -1,4 +1,32 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:TextAnalyser" x:Class="TextAnalyser.TextAnalyserPage">
-	<Label Text="Welcome to Xamarin Forms!" VerticalOptions="Center" HorizontalOptions="Center" />
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:local="clr-namespace:TextAnalyser" 
+    x:Class="TextAnalyser.TextAnalyserPage"
+    Title="Text Analyser">
+
+    <StackLayout>
+        <Label Text="Please enter text to be analysed." 
+    HorizontalOptions="Center" />
+
+   <Editor HeightRequest = "250" 
+        Keyboard="Default" />
+
+        <Button Text="Analyse" VerticalOptions="Start"/>
+
+        <Label HorizontalOptions="FillAndExpand">
+            Key Words and Rating Output
+        </Label>
+        
+        <StackLayout Orientation="Horizontal" VerticalOptions="End">
+            
+            <Button Text="Reset" VerticalOptions="Start" HorizontalOptions="FillAndExpand"/>
+            <Button Text="History" VerticalOptions="Start" HorizontalOptions="FillAndExpand"/>
+        </StackLayout>
+        
+    </StackLayout>
+
 </ContentPage>
